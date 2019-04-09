@@ -20,6 +20,7 @@ public class AdditionalInfoServlet extends HttpServlet {
 		out.print("<h1>Testing</h1>");
 		out.print("</body>");
 		out.print("</html>");
+		out.close();
 	}
 
 }
