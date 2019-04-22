@@ -37,7 +37,7 @@ public class LogInOutServlet extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = resp.getWriter();
 		HttpSession session = req.getSession(false);
-		if (session != null || session.getAttribute("id") != null) {
+		if (session != null && session.getAttribute("id") != null) {
 			session.invalidate();
 			out.println("로그아웃 작업 완료하였습니다");
 		} else {
